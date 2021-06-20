@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Parallex</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+    <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    </header>
+    <section>
+        <img src="images/stars.png" id="stars">
+        <img src="images/moon.png" id="moon">
+        <img src="images/mountains_behind.png" id="mountains_behind"> 
+        <h1 id="text">Moon Light</h1>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="images/mountains_front.png" id="mountains_front"> 
+    </section>
+    <div class="sec" id="sec">
+        <div class="profile">
+            <img class="me" src="images/me.png" height="120" width="120">
+            <h2>Hi.</h2>
+            <p>I'm a web designer / developer based in Chattogram, Bangladesh. I have a passion for web design and love to create for web and mobile devices.</p>
+          </div>
+          <hr>
+          <div class="skills">
+            <h2>What I can do.</h2>
+            <div class="skill-row">
+              <img class="" src="" alt="">
+              <h3>Design what you want.</h3>
+              <p>I like to keep it simple. My goals are to focus on typography, content and conveying the message that you want to send.</p>
+            </div>
+            <div class="skill-row">
+              <img class="" src="" alt="">
+              <h3>Develop what you need.</h3>
+              <p>I'm a developer, so I know how to create your website to run across devices using the latest technologies available.</p>
+            </div>
+          </div>
+          <hr>
+          <div class="contact-me">
+            <h2>I can help.</h2>
+            <h3>I’m currently available for freelance work.</h3>
+            <p>If you have a project that you want to get started, think you need my help with something or just fancy saying hey, then get in touch.</p>
+            <a class="btn" href="mailto:shakib.jobair@gmail.com">MESSAGE ME</a>
+          </div>
+          <div class="bottom-container">
+            <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
+            <a class="footer-link" href="https://facebook.com/jobair123">Facebook</a>
+            <a class="footer-link" href="">Website</a>
+            <p>© 2021 Jobair Shakib. All rights reserved.</p>
+          </div>
+    </div>
+    
+
+    <script>
+      let stars = document.getElementById('stars');
+      let moon = document.getElementById('moon');
+      let mountains_behind = document.getElementById('mountains_behind');
+      let text = document.getElementById('text');
+      let btn = document.getElementById('btn');
+      let mountains_front = document.getElementById('mountains_front');
+      let header = document.querySelector('header');
+
+      window.addEventListener('scroll',function(){
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + 'px';
+        moon.style.top = value * 1.05 + 'px';
+        mountains_behind.style.top = value * 0.5 + 'px';
+        mountains_front.style.top = value * 0 + 'px';
+        text.style.marginRight = value * 4 + 'px';
+        text.style.marginTop = value * 1.5 + 'px';
+        btn.style.marginTop = value * 1.5 + 'px';
+        header.style.top = value * 0.5 + 'px';
+      })
+
+    </script>
+    
+</body>
+</html>
